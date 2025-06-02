@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My portfolio | Home page</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to my portfolio website!</h1>
+        <nav>
+            <a href="index.html">Home page</a>
+            <a href="portfolio.html">Portfolio Section</a>
+            <a href="design.html">Design Thinking Process</a>
+            <a href="global_goals.html">UN Global Goals</a>
+            <a href="accessibility.html">Accessibility</a>
+            <a href="behind.html">Behind</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>About me</h2>
+            <img src="images/zhenda.jpg" alt="头像" style="width: 200px; height: auto;">
+            <div class="intro-text">
+                I am 真达，a student from Nanyang Model private school，keen on physics, basketball, cats
+                <button class="toggle-button">Detail Disclosure Button</button>
+                <div class="details">
+                    <img src="images/pc1.jpg" alt="Cat picture 1">
+                    <img src="images/pc2.jpg" alt="Cat picture 2">
+                </div>
+                and Japanese manga
+                <button class="toggle-button">Detail Disclosure Button</button>
+                <div class="details">
+                    <img src="images/pc3.png" alt="Manga picture 1">
+                    <img src="images/pc4.jpg" alt="Manga picture 2">
+                </div>
+            </div>
+            <p>___________________________________________________________________________________________________________________________________________________________________________________</p>
+        </section>
+    </main>
+
+    <footer style="padding: 20px; background: #2c3e50; color: white;">
+        <p>© 2025 copyright | contact via mail: hziyang837@gmail.com</p>
+        <p>Phone number: 18217125106 | Wechat: zhendanq5106</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.toggle-button').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const details = e.target.nextElementSibling;
+                details.classList.toggle('show');
+                e.target.textContent = details.classList.contains('show')
+                    ? 'Pack up details Button'
+                    : 'Detail Disclosure Button';
+            });
+        });
+    </script>
+</body>
+</html>

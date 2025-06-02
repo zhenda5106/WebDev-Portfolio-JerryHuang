@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Portfolio | Portfolio Section</title>
+  <link rel="stylesheet" href="css/pf.css" />
+</head>
+<body>
+  <header class="compact-header">
+    <a href="index.html" class="back-link">← Back to Home</a>
+    <h1>My Interests</h1>
+  </header>
+
+  <main>
+    <section class="portfolio-container">
+
+      <div class="card left">
+        <img src="images/physics.png" alt="Physics" />
+        <div class="content">
+          <h2>Physics</h2>
+          <p>Physics is the art of understanding the universe through the language of mathematics</p>
+          <button class="toggle-button">Detail Disclosure Button</button>
+          <div class="details">
+            <img src="images/physics1.png" alt="Physics Image 1" />
+            <img src="images/physics2.jpg" alt="Physics Image 2" />
+            <img src="images/physics3.jpg" alt="Physics Image 3" />
+            <img src="images/physics4.jpg" alt="Physics Image 4" />
+          </div>
+        </div>
+      </div>
+
+      <div class="card right">
+        <img src="images/basketball.png" alt="Basketball" />
+        <div class="content">
+          <h2>Basketball</h2>
+          <p>Basketball is a game of rhythm, teamwork, and the relentless pursuit of the hoop</p>                                                                                                                         
+          <button class="toggle-button">Detail Disclosure Button</button>
+          <div class="details">
+            <img src="images/basketball1.png" alt="Basketball Image 1" />
+            <img src="images/basketball2.png" alt="Basketball Image 2" />
+            <img src="images/basketball3.png" alt="Basketball Image 3" />
+            <img src="images/basketball4.png" alt="Basketball Image 4" />
+          </div>
+        </div>
+      </div>
+
+      <div class="card left">
+        <img src="images/music.png" alt="music" />
+        <div class="content">
+          <h2>Music</h2>
+          <p>Music is the invisible thread that weaves emotion into sound, painting silence with rhythm and soul</p>
+          <button class="toggle-button">Detail Disclosure Button</button>
+          <div class="details">
+            <img src="images/music1.jpg" alt="music1" />
+            <img src="images/music2.png" alt="music2" />
+            <img src="images/music3.png" alt="music3" />
+            <img src="images/music4.png" alt="music4" />
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="card left">
+        <img src="images/manga.png" alt="manga" />
+        <div class="content">
+          <h2>Manga</h2>
+          <p>A gentle doorway to worlds beyond, where reality fades and dreams take flight</p>
+          <button class="toggle-button">Detail Disclosure Button</button>
+          <div class="details">
+            <img src="images/manga1.png" alt="manga1" />
+            <img src="images/manga2.png" alt="manga2" />
+            <img src="images/manga3.png" alt="manga3" />
+            <img src="images/manga4.png" alt="manga4" />
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 真达 | Email: hziyang837@gmail.com | WeChat: zhendanq5106</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.toggle-button').forEach(button => {
+      button.addEventListener('click', () => {
+        const details = button.nextElementSibling;
+
+        if (details.style.maxHeight === '0px' || details.style.maxHeight === '') {
+          details.style.maxHeight = details.scrollHeight + 'px';
+          details.style.opacity = '1';
+          button.textContent = 'Pack up details Button';
+        } else {
+          details.style.maxHeight = '0';
+          details.style.opacity = '0';
+          button.textContent = 'Detail Disclosure Button';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

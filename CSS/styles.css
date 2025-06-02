@@ -1,0 +1,93 @@
+:root {
+    --secondary: #90caf9; /* blue */
+}
+
+body {
+    text-align: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+header, main, footer {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px 0;
+    background: #2c3e50;
+}
+
+nav a {
+    background: var(--secondary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    transition: 
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+nav a:hover {
+    transform: scale(1.07);
+    background: white;
+    color: var(--secondary);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
+}
+
+.toggle-button {
+    background: var(--secondary);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 8px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-button:hover {
+    transform: scale(1.05);
+    background: white;
+    color: var(--secondary);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+    margin-top: 10px;
+}
+
+.details.show {
+    max-height: 500px; /* enough place */
+    opacity: 1;
+}
+
+.details img {
+    width: 200px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.intro-text {
+    margin: 20px auto;
+    max-width: 800px;
+    line-height: 1.6;
+}
